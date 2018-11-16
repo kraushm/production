@@ -30,7 +30,7 @@ def kesch = [name: 'kesch',
              modulesUnuseProduction: '',
              prefixProduction: '/apps/escha/UES/jenkins/RH7.3-gnu_PE17.02/easybuild']
 
-def leone = [name: 'leone',
+def leone = [name: 'leoneTDS',
              archs: [],
              buildPath: '/dev/shm/$USER/easybuild/stage/build',
              unusePath: '/apps/leone/UES/PrgEnv-gnu-2016b',
