@@ -38,6 +38,14 @@ def leone = [name: 'leone',
              modulesUnuseProduction: '',
              prefixProduction: '$APPS/UES/jenkins/RH6.7EUS/easybuild']
 
+def leoneTDS = [name: 'leone',
+             archs: [],
+             buildPath: '/dev/shm/$USER/easybuild/stage/build',
+             unusePath: '/apps/leone/UES/PrgEnv-gnu-2016b',
+             modulesProduction: '',
+             modulesUnuseProduction: '',
+             prefixProduction: '$APPS/UES/jenkins/RH6.10EUS/easybuild']
+
 def monch = [name: 'monch',
              archs: [],
              buildPath: '/dev/shm/$USER/easybuild/stage/build',
@@ -46,4 +54,4 @@ def monch = [name: 'monch',
              modulesUnuseProduction: '',
              prefixProduction: '$APPS/UES/jenkins/RH6.9-17.06/easybuild']
 
-return [daint, dom, fulen, kesch, leone]
+return [leoneTDS]
