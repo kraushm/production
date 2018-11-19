@@ -20,4 +20,6 @@ versionsuffix = "-%s-%s%s" % (glib, glibver, glibversuffix)
 
 dependencies = [(glib, glibver, glibversuffix)]
 
+postinstallcmds = ["cp %(builddir)s/src/3rdparty/phonon/phonon/*.h %(installdir)s/include/."]
+
 moduleclass = 'devel'
