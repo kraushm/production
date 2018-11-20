@@ -13,6 +13,10 @@ source_urls = [
 
 sources = ['%(namelower)s-everywhere-opensource-src-%(version)s.tar.gz']
 
+installdir = '%(installdir)s'
+builddir = '%(builddir)s'
+folder_name = sources[0].split('.tar.gz')[0]
+
 glib = 'GLib'
 glibver = '2.44.0'
 glibversuffix = '-Python-2.7.12'
@@ -20,6 +24,6 @@ versionsuffix = "-%s-%s%s" % (glib, glibver, glibversuffix)
 
 dependencies = [(glib, glibver, glibversuffix)]
 
-postinstallcmds = ["cp %(builddir)s/src/3rdparty/phonon/phonon/*.h %(installdir)s/include/."]
+postinstallcmds = ['cp %s/%s/src/3rdparty/phonon/phonon/*.h %s/include/.' % (builddir, folder_name, installdir) ]
 
 moduleclass = 'devel'
