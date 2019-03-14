@@ -47,6 +47,7 @@ stage('Build Stage') {
                 if (machineName in ['leone', 'fulen'])
                     moduleDefinition = '''module() { eval `/usr/bin/modulecmd bash $*`; }
                                           export -f module'''
+                #    moduleDefinition = '''
                 def workingDir = sh(returnStdout: true,
                                     script: 'echo $PWD').trim()
                                 def project_name = env.JOB_BASE_NAME.trim()
@@ -58,11 +59,14 @@ stage('Build Stage') {
                                                       echo $buildPath""").trim()
                 def moduleUnuse = machineModulesUnuseProduction ? "module unuse $machineModulesUnuseProduction" : ""
                 def moduleUse = machineModulesProduction ? "module use $machineModulesProduction" : ""
+                def modulePath = sh(returnStdout: true,,
+                                    script: 'export MODULEPATH=/opt/cray/pe/craype/default/modulefiles:/opt/cray/pe/modulefiles:/opt/cray/modulefiles:/opt/modulefiles:/cm/local/modulefiles:/cm/shared/modulefiles:/apps/escha/UES/jenkins/RH7.5/generic/easybuild/modules/all').trim()
                 def command = """$loginBash
                                  $moduleDefinition
                                  $moduleUnuse
-                                 $moduleUse"""
-
+                                 $moduleUse
+                                 $modulePath"""
+                
                 for (architecture in architectures) {
                     def arch = architecture
                     def machineLabel = arch ? "${machineName}-${arch}" : "${machineName}"
