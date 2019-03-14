@@ -63,8 +63,7 @@ stage('Build Stage') {
                 def command = """$loginBash
                                  $moduleDefinition
                                  $moduleUnuse
-                                 $moduleUse
-                                 $modulePath"""
+                                 $moduleUse"""
                 
                 for (architecture in architectures) {
                     def arch = architecture
