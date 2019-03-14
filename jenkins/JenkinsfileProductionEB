@@ -47,7 +47,6 @@ stage('Build Stage') {
                 if (machineName in ['leone', 'fulen'])
                     moduleDefinition = '''module() { eval `/usr/bin/modulecmd bash $*`; }
                                           export -f module'''
-                #    moduleDefinition = '''
                 def workingDir = sh(returnStdout: true,
                                     script: 'echo $PWD').trim()
                                 def project_name = env.JOB_BASE_NAME.trim()
