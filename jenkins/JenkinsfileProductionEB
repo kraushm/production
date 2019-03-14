@@ -47,6 +47,8 @@ stage('Build Stage') {
                 if (machineName in ['leone', 'fulen'])
                     moduleDefinition = '''module() { eval `/usr/bin/modulecmd bash $*`; }
                                           export -f module'''
+                if (machineName in ['tsaTDS'])
+                    moduleDefinition = '''export MODULEPATH=$MODULEPATH:/apps/arolla/UES/jenkins/RH7.5/generic/easybuild/modules/all'''
                 def workingDir = sh(returnStdout: true,
                                     script: 'echo $PWD').trim()
                                 def project_name = env.JOB_BASE_NAME.trim()
