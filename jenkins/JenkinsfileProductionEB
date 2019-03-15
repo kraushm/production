@@ -89,7 +89,7 @@ stage('Build Stage') {
                 }
 
                 withEnv(["PATH=$PATH:/cm/local/apps/environment-modules/4.0.0/libexec",
-                         "MODULE_VERSION=4.0.0",
+                         "EASYBUILD_MODULES_TOOL=EnvironmentModules",
                          "EASYBUILD_BUILDPATH=$buildPathExpanded",
                          "EASYBUILD_TMPDIR=/scratch/jenscscs/$project_name/tmp",
                          "EB_CUSTOM_REPOSITORY=$workingDir/easybuild"]) {
