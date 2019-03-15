@@ -86,7 +86,8 @@ stage('Build Stage') {
                                  """
                 }
 
-                withEnv(["EASYBUILD_BUILDPATH=$buildPathExpanded",
+                withEnv(["MODULEPATH=$MODULEPATH:/apps/arolla/UES/jenkins/RH7.5/generic/easybuild/modules/all",
+                         "EASYBUILD_BUILDPATH=$buildPathExpanded",
                          "EASYBUILD_TMPDIR=/scratch/jenscscs/$project_name/tmp",
                          "EB_CUSTOM_REPOSITORY=$workingDir/easybuild"]) {
                     sh("""$command
