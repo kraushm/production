@@ -39,7 +39,6 @@
  Ruby-2.6.3-gmvolf-18.12.eb                           --installpath=/apps/arolla/UES/jenkins/RH7.5/gnu/18.12/easybuild 
  PGI-18.10-GCC-7.4.0-2.31.1.eb                        --installpath=/apps/arolla/UES/jenkins/RH7.5/pgi/18.10/easybuild
  PGI-19.4-GCC-7.4.0-2.31.1.eb                         --installpath=/apps/arolla/UES/jenkins/RH7.5/pgi/19.4/easybuild
- OpenMPI-3.1.1-PGI-19.5-GCC-7.3.0-2.30-cuda-9.2.eb    --installpath=/apps/arolla/UES/jenkins/RH7.5/pgi/19.5/easybuild
  PGI-19.5-GCC-7.3.0-2.30.eb                           --installpath=/apps/arolla/UES/jenkins/RH7.5/pgi/19.5/easybuild
  PrgEnv-cce-tsa-18.12.eb                              --module-naming-scheme=EasyBuildMNS
  PrgEnv-gnu-tsa-gmvolf-18.12.eb                       --module-naming-scheme=EasyBuildMNS
