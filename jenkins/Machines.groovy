@@ -25,9 +25,9 @@ def kesch = [name: 'kesch',
 def tsa = [name: 'tsa',
            archs: [],
            buildPath: '/tmp/$USER/easybuild/build',
-           unusePath: '/apps/arolla/UES/modulefiles',
+           unusePath: '/apps/arolla/UES/jenkins/RH7.7/MCH-PE20.08-dev0/generic/easybuild',
            modulesProduction: '',
            modulesUnuseProduction: '',
-           prefixProduction: '/apps/arolla/UES/jenkins/RH7.7/MCH-PE20.08-dev0/generic/easybuild']
+           prefixProduction: '/apps/arolla/UES/jenkins/RH7.7/MCH-PE20.08-SPACK-dev0/easybuild']
 
 return [daint, dom, kesch, tsa]
